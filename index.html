@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Advisor</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main id="chat-container">
+    <div id="chat-header">
+      <h1>Financial Advisor</h1>
+      <p>Your guide with a century of market wisdom.</p>
+    </div>
+    <div id="chat-history"></div>
+    <div id="image-preview-container">
+      <img id="image-preview" alt="Image preview">
+      <button id="close-preview" aria-label="Remove image">&times;</button>
+    </div>
+    <form id="chat-form">
+      <input type="file" id="file-input" hidden accept="image/*">
+      <button type="button" id="attach-button" aria-label="Attach image">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+          <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+        </svg>
+      </button>
+      <input type="text" id="chat-input" placeholder="Ask a financial question..." autocomplete="off" aria-label="Ask a financial question">
+      <button type="submit" aria-label="Send message">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+        </svg>
+      </button>
+    </form>
+  </main>
+  
+  <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://esm.sh/@google/genai@^0.12.0",
+        "marked": "https://esm.sh/marked@^12.0.2"
+      }
+    }
+  </script>
+  <script type="module" src="index.tsx"></script>
+</body>
+</html>
